@@ -1,5 +1,9 @@
 // Created by Jessica Joseph on 4/12/18
 
+#include <iostream>
+#include <map>
+#include <string>
+
 int firstUniqChar(string s) {
 	map<char, int> container;
         
