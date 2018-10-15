@@ -1,5 +1,9 @@
 // Created by Jessica Joseph on 4/12/18
 
+#include <iostream>
+#include <map>
+#include <string>
+
 int numJewelsInStones(string J, string S){
 	map<char, int> container;
 	int jewelCount = 0;

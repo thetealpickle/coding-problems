@@ -13,7 +13,7 @@ vector<int> anagramMapping(vector<int> &A, vector<int> &B) {
 	}
 
 	for (auto i=0; i < A.size(); i++) {
-		mappingVector.oush_back(hashTable[A[i]]);
+		mappingVector.push_back(hashTable[A[i]]);
 	}
 
 	return mappingVector;
