@@ -15,6 +15,9 @@ Guaranteed constraints:
 
 1 ≤ a.length ≤ 10^5
 1 ≤ a[i] ≤ a.length.
+
+Based on whether the interviewer wants a general abstract solution or 
+a highly efficient solution tailored to the constraints of this problem will need to be specified
 */
 
 import Foundation
