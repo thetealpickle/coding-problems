@@ -3,5 +3,6 @@
     <pages>
         <page name='Introduction'/>
         <page name='FirstDuplicate'/>
+        <page name='FirstNotRepeatingCharacter'/>
     </pages>
 </playground>

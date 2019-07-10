@@ -22,7 +22,6 @@ a highly efficient solution tailored to the constraints of this problem will nee
 
 import Foundation
 
-
 var testcases = [[2, 1, 3, 5, 3, 2], [2, 2], [2, 4, 3, 5, 1]]
 
 func runSampleTestCases(_ testcase: [Int]) {
