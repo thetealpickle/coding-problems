@@ -14,6 +14,7 @@ If there are no such elements, return -1.
 Guaranteed constraints:
 
 1 ≤ a.length ≤ 10^5
+ 
 1 ≤ a[i] ≤ a.length.
 
 Based on whether the interviewer wants a general abstract solution or 
@@ -22,7 +23,7 @@ a highly efficient solution tailored to the constraints of this problem will nee
 
 import Foundation
 
-var testcases = [[2, 1, 3, 5, 3, 2], [2, 2], [2, 4, 3, 5, 1]]
+var testcases = [[2, 1, 3, 5, 2, 3], [2, 2], [2, 4, 3, 5, 1]]
 
 func runSampleTestCases(_ testcase: [Int]) {
     
@@ -49,5 +50,77 @@ func runSampleTestCases(_ testcase: [Int]) {
 }
 
 testcases.map { runSampleTestCases($0)}
+
+
+/*
+ 
+ // Example walk through for the tailored testcase - firstDuplicateTailored(in:)
+ 
+ Run #1
+ [2, 1, 3, 5, 2, 3]
+  ^
+
+ val = 2
+ a[abs(val) - 1] *= -1
+ a[abs(2) - 1] *= -1
+ a[2-1] *= -1
+ a[1] *= -1
+
+ result: [2, -1, 3, 5, 2, 3]
+ 
+ Run #2
+ [2, -1, 3, 5, 2, 3]
+     ^
+ 
+ val = -1
+ a[abs(val) - 1] *= -1
+ a[abs(1) - 1] *= -1
+ a[ 1-1] *= -1
+ a[ 0] *= -1
+ 
+ result: [-2, -1, 3, 5, 2, 3]
+ 
+ Run #3
+ [-2, -1, 3, 5, 2, 3]
+          ^
+ 
+ val = 3
+ a[abs(val) - 1] *= -1
+ a[abs(3) - 1] *= -1
+ a[3 -1] *= -1
+ a[ 2] *= -1
+ 
+ result: [-2, -1, -3, 5, 2, 3]
+ 
+ 
+ Run #4
+ [-2, -1, -3, 5, 2, 3]
+              ^
+ 
+ val = 5
+ a[abs(val) - 1] *= -1
+ a[abs(5) - 1] *= -1
+ a[5 -1] *= -1
+ a[ 4] *= -1
+ 
+ result: [-2, -1, -3, 5, -2, 3]
+ 
+ Run #5
+ [-2, -1, -3, 5, -2, 3]
+                  ^
+ 
+ val = -2
+ a[abs(val) - 1] *= -1
+ a[abs(-2) - 1] *= -1
+ a[ 2-1] *= -1
+ a[ 1] *= -1
+ 
+ result: [-2, 1, -3, 5, -2, 3]
+ 
+ repeat number = 2
+ return 2
+ 
+ */
+
 
 //: [Next](@next)
