@@ -2,7 +2,8 @@
 <playground version='6.0' target-platform='macos'>
     <pages>
         <page name='Introduction'/>
-        <page name='FirstDuplicate'/>
-        <page name='FirstNotRepeatingCharacter'/>
+        <page name='First Duplicate'/>
+        <page name='First Not Repeating Character'/>
+        <page name='Two Sum'/>
     </pages>
 </playground>
